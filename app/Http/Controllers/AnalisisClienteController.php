@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Analisis_cliente;
+use App\Models\AnalisisCliente;
 use Illuminate\Http\Request;
 
 class AnalisisClienteController extends Controller
@@ -18,10 +18,12 @@ class AnalisisClienteController extends Controller
     }
 //store para recibir formulario del cliente
     public function store(Request $request){
-        $analisis_cliente = new analisis_cliente();
-        $analisis_cliente->Usuario = $request->Usuario;
-        $analisis_cliente->Tiempo_online = $request->Tiempo_online;
-        $analisis_cliente->Tiempo_offline = $request->Tiempo_offline;
-        $analisis_cliente->save(); 
+        $analisis_clientes = new AnalisisCliente();
+        $analisis_clientes->Usuario = $request->Usuario;
+        $analisis_clientes->Tiempo_online = $request->Tiempo_online;
+        $analisis_clientes->Tiempo_offline = $request->Tiempo_offline;
+        $analisis_clientes->save(); 
+//direccion despues de guardado
+        return redirect()->route('analisis-cliente.create');
     }
 }
