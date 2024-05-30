@@ -21,8 +21,9 @@ Route::get('/', function () {
 });
 
 //Rutas Santiago
-Route::get('analisis-cliente',[AnalisisClienteController::class,'create'])->name('analisis-cliente.create');
-Route::post('analisis-cliente',[AnalisisClienteController::class,'store'])->name('analisis-cliente.store');
+//rutas analisis cliente
+Route::resource('analisis-cliente', AnalisisClienteController::class)->names('analisis-cliente');
+
 //Rutas Santiago
 
 //Rutas Stiven
