@@ -8,11 +8,11 @@ use App\Http\Controllers\MedidasSeguridadController;
 use App\Http\Controllers\SistemaPagoController;
 use App\Http\Controllers\TipoDocumentoController;
 use App\Http\Controllers\VerificacionPedidoController;
-use App\Http\Controllers\CatalogoController; 
-use App\Http\Controllers\CategoriaPedidoController; 
-use App\Http\Controllers\EstadoPedidoController; 
-use App\Http\Controllers\GeneroController; 
-use App\Http\Controllers\MovimientoController; 
+use App\Http\Controllers\CatalogoController;
+use App\Http\Controllers\CategoriaPedidoController;
+use App\Http\Controllers\EstadoPedidoController;
+use App\Http\Controllers\GeneroController;
+use App\Http\Controllers\MovimientoController;
 use App\Http\Controllers\PromocionesDescuentosController;
 use App\Http\Controllers\TipoPqrsController;
 
@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 //Rutas Santiago
-Route::get('analisis-cliente',[AnalisisClienteController::class,'create']);
+Route::get('analisis-cliente',[AnalisisClienteController::class,'create'])->name('analisis-cliente.create');
 Route::post('analisis-cliente',[AnalisisClienteController::class,'store'])->name('analisis-cliente.store');
 //Rutas Santiago
 
@@ -46,13 +46,13 @@ route::get('catalogo',[CatalogoController::class,'create']);
 
 route::get('categoria-pedido',[CategoriaPedidoController::class,'create']);
 
-route::get('estado-pedido',[EstadoPedidoController::class,'create']); 
+route::get('estado-pedido',[EstadoPedidoController::class,'create']);
 
-route::get('genero',[GeneroController::class,'create']); 
+route::get('genero',[GeneroController::class,'create']);
 
-route::get('movimiento',[MovimientoController::class,'create']); 
+route::get('movimiento',[MovimientoController::class,'create']);
 
-route::get('promociones-descuentos',[PromocionesDescuentosController::class,'create']); 
+route::get('promociones-descuentos',[PromocionesDescuentosController::class,'create']);
 
 route::get('tipo-pqrs',[TipoPqrsController::class,'create']);
 
