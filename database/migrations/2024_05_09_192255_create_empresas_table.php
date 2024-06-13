@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('razon_social');
             $table->integer('nit');
-            $table->string('Obejeto_social');
-            
+            $table->string('objeto_social');
+
             $table->timestamps();
         });
     }
