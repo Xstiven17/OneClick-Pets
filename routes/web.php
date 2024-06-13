@@ -30,6 +30,7 @@ Route::resource('analisis-cliente', AnalisisClienteController::class)->names('an
 Route::get('cabeza-factura',[CabezaFacturaController::class,'create']);
 
 Route::get('empresa',[EmpresaController::class,'create']);
+Route::post('/empresas', [EmpresaController::class, 'store'])->name('empresas.store');
 
 Route::get('seguridad', [MedidasSeguridadController::class,'create']);
 
