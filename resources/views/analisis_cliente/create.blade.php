@@ -7,7 +7,7 @@
     <title>Analisis cliente</title>
 </head>
 <body>
-        <h1>Analisis cliente</h1>
+        <h1>Añadir analisis de cliente</h1>
         <form action="{{route('analisis-cliente.store')}}" method="post" enctype="multipart/form-data">
             @csrf
             <input type="text" name="Usuario" placeholder="Usuario">

@@ -15,6 +15,7 @@ use App\Http\Controllers\GeneroController;
 use App\Http\Controllers\MovimientoController;
 use App\Http\Controllers\PromocionesDescuentosController;
 use App\Http\Controllers\TipoPqrsController;
+use App\Models\AnalisisCliente;
 
 Route::get('/', function () {
     return view('welcome');
